@@ -9,6 +9,20 @@
 
 //Code here
 
+class Shape {
+    constructor(sides){
+        this.sides = sides;
+    }
+
+    report() {
+        return `This shape has ${this.sides} sides`;
+    }
+}
+
+const triangle = new Shape(3);
+const square = new Shape(4);
+const pentagon = new Shape(5);
+
 
 //////////////////PROBLEM 2////////////////////
 
@@ -24,5 +38,18 @@
 
 //Code here
 
+function Cohort(program,campus,number,students) {
+    this.program = program;
+    this.campus = campus;
+    this.number = number;
+    this.students = students;
+    this.sayName = () => `This cohort is called ${this.program}${this.campus}${this.number}`
+    this.takeAttendance = () => console.log(this.students)
+}
 
+const cohort1 = new Cohort('w', 'pr', '27', ['Brett', 'Mike', 'Jaylan'])
+const cohort2 = new Cohort('w', 'pr', '31', ["Brendan Eich", "Dan Abramov", "Wes Bos", "Kent Dodds", 'Brett Hays'])
+
+cohort1.sayName()
+cohort2.takeAttendance()
 
